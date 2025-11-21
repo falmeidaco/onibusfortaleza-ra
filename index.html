@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type='module' src='src/main.js'></script>
+  <link rel='stylesheet' type='text/css' href='src/style.css' />
+</head>
+
+<body>
+  <main>
+    <a-scene id="glscene" locar-webcam>
+      <a-assets>
+        <img id="placa-onibus" src="placa-onibus.png">
+      </a-assets>
+      <a-camera look-controls='magicWindowTrackingEnabled: false' wasd-controls locar-camera rotation-reader></a-camera>
+    </a-scene>
+  </main>
+</body>
+
+</html>
