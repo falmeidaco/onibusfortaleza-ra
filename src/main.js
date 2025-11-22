@@ -157,7 +157,7 @@ AFRAME.registerComponent('tag-text', {
     txt.setAttribute('value', d.text);
     txt.setAttribute('color', d.color);
     txt.setAttribute('align', 'center');
-    txt.setAttribute('position', '0 0 0.01');
+    txt.setAttribute('position', '0 0 0.1');
 
     el.appendChild(bg);
     el.appendChild(txt);
