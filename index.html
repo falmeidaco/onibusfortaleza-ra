@@ -5,14 +5,29 @@ Página criada como entrega para o curso XR
 Disponível em: https://github.com/falmeidaco/onibusfortaleza-ra
 Créditos pin (objeto 3D): Ngo.Phuoc.Truong(https://sketchfab.com/Ngo.Phuoc.Truong) https://sketchfab.com/3d-models/map-pin-2d59d85ab74d4c668beb7fd506056e31 
 -->
-<html>
+<html lang="pt-br">
+
 <head>
-  <title>ônibus Fortaleza RA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ônibus Fortaleza RA</title>
   <script type='module' src='src/main.js'></script>
   <link rel='stylesheet' type='text/css' href='src/style.css' />
 </head>
 
 <body>
+  <header>
+    <div class="site-logo">
+      <img src="public/site-logo.png" width="80" alt="Ônibus Fortaleza RA">
+    </div>
+    <div class="site-title">
+      <h1>Ônibus Fortaleza RA</h1>
+      <p>Visualize as paradas de ônibus com realidade aumentada</p>
+    </div>
+    <div class="site-options">
+      <a class="toggle-info" href="#info">&#9432;</a>
+    </div>
+  </header>
   <main>
     <a-scene id="glscene" locar-webcam>
       <a-assets>
@@ -20,6 +35,27 @@ Créditos pin (objeto 3D): Ngo.Phuoc.Truong(https://sketchfab.com/Ngo.Phuoc.Truo
       </a-assets>
       <a-camera look-controls='magicWindowTrackingEnabled: false' wasd-controls locar-camera rotation-reader></a-camera>
     </a-scene>
+    <section class="site-info">
+      <article>
+        <h2>&#9432; Sobre esta página</h2>
+        <p>
+          Este projeto é uma aplicação web com <strong>Realidade Aumentada (RA)</strong> baseada em geolocalização. O objetivo é
+          permitir que os moradores e visitantes de Fortaleza-CE visualizem as paradas de ônibus mais próximas sobrepostas à imagem da
+          câmera do dispositivo móvel, facilitando a orientação urbana.</p>
+        </p>
+        <h3>Mais informações</h3>
+        <p>
+          <a target="_blank" href="https://github.com/falmeidaco/onibusfortaleza-ra">Repositório do projeto no GitHub</a>
+        </p>
+        <p>
+          Desenvolvido por <strong>Felipe Almeida</strong><br>
+          <a target="_blank" href="https://github.com/falmeidaco/">Github</a> | <a target="_blank" href="https://linkedin.com/in/falmeidaco">LinkedIn</a>
+        </p>
+        <p>
+          <a class="toggle-info" href="#voltar">VOLTAR</a>
+        </p>
+      </article>
+    </section>
   </main>
 </body>
 

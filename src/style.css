@@ -1,50 +1,94 @@
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
-#gpsinput > div {
-    display: flex;
-    justify-content: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 main {
-    width: 100%;
-    height: 100%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.a-enter-vr {
+  display: none;
+}
+
+header {
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(#0e0e8a, #1111c2);
+  color: white;
+  display: flex;
+  height: 80px;
+
+  .site-logo {
     position: relative;
-    display: flex;
-    flex-direction: column-reverse;
+    flex-basis: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  .site-title {
+    flex-grow: 1;
+    align-content: center;
+    h1 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: .1rem;
+    }
+    p {
+      margin: 0;
+      font-size: .8rem;
+    }
+  }
+
+  .site-options {
+    padding: 0 20px 0 10px;
+    align-content: center;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
 }
 
-#gpsinput {
-    z-index: 1;
-    display: flex;
-/*    height: 100%; */
-    width: 100%;
-    justify-content: end; 
-    margin-bottom: 10px;
-    flex-direction: column;
-    background-color: #c0c0c0; 
+.site-info {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, .95);
+  article {
+   padding: 20px; 
+   h2 {
+    margin-top: 0;
+   }
+  }
+  .toggle-info {
+    text-decoration: none;
+    border: 1px solid #1111c2;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
 }
-
-@media only screen and (orientation: landscape) {
-    #gpsinput {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    #gpsinput input, #gpsinput button {
-        margin: 10px;
-    }
-}
-
-@media only screen and ((max-device-width: 768px) and (orientation: portrait)) {
-    #gpsinput input, #gpsinput button {
-        font-size: 150%;
-    }
-}
-@media only screen and ((max-device-height: 768px) and (orientation: landscape)) {
-    #gpsinput input, #gpsinput button {
-        font-size: 120%;
-    }
+.site-info.visible {
+  display: block;
 }

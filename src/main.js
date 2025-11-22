@@ -2,6 +2,18 @@ import 'aframe';
 import 'locar-aframe';
 import 'aframe-look-at-component';
 
+document.querySelectorAll('.toggle-info').forEach(a => {
+  a.addEventListener('click', e=> {
+    e.preventDefault();
+    const info_panel = document.querySelector('.site-info');
+    if (info_panel.classList.contains('visible')) {
+      info_panel.classList.remove('visible')
+    } else {
+      info_panel.classList.add('visible')
+    }
+  }, false);
+})
+
 /* CONFIGURAÇÕES GERAIS */
 const CONFIG = {
   API_URL: 'https://artecidade.com/wp-content/api-onibus/data.php',
