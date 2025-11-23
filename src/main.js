@@ -63,7 +63,6 @@ async function renderizarPins(dados, userLat, userLng) {
 
     // Cria o elemento pai (Pin)
     const pin = document.createElement("a-entity");
-    pin.setAttribute('id', `pin-${index}`);
     pin.setAttribute('look-at', "[camera]");
     pin.setAttribute('locar-entity-place', { latitude: pLat, longitude: pLng });
     pin.setAttribute('scale', '100 100 100');
@@ -176,17 +175,20 @@ AFRAME.registerComponent('pin-onibus', {
     // Modelo 3D
     const pin = document.createElement('a-entity');
     pin.setAttribute('gltf-model', 'url(map_pin.glb)');
+    pin.setAttribute('animation', " property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear");
     el.appendChild(pin);
 
     // Placa
     const placa = document.createElement('a-circle');
-    placa.setAttribute('position', '0 0.07 -0.05');
+    placa.setAttribute('position', '0 0.07 -0.3');
     placa.setAttribute('radius', '0.15');
+    placa.setAttribute('animation', " property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear");
     placa.setAttribute('material', 'src: #placa-onibus; color: white; shader: standard; repeat: 1 1; side: double');
     el.appendChild(placa);
 
+    // Tag Distância
     const tagDistancia = document.createElement('a-entity');
-    tagDistancia.setAttribute('position', '0 -.15 .1');
+    tagDistancia.setAttribute('position', '0 -.1 .5');
     tagDistancia.setAttribute('scale', '.4 .4 .4');
     tagDistancia.setAttribute('tag-text', `text:${d.text}; width: 1; color:#FFF; bgColor:#000`);
     el.appendChild(tagDistancia);

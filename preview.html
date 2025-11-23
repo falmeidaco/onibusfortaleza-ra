@@ -131,6 +131,7 @@ Disponível em: https://github.com/falmeidaco/ra1
                 /* Elemento 3D */
                 const pin = document.createElement('a-entity')
                 pin.setAttribute('gltf-model', 'url(map_pin.glb)')
+                pin.setAttribute('animation', " property: rotation; to: 0 360 0; loop: true; dur: 1500; easing: easeInOutQuad");
                 this.el.appendChild(pin);
 
                 /* Placa de Onibus */
